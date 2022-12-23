@@ -12,8 +12,8 @@ module.exports = {
       gap: {
         i: 'inherit',
       },
-      rotate:{
-        '360' : '360deg'
+      rotate: {
+        360: '360deg',
       },
     },
     fontFamily: {
@@ -22,10 +22,10 @@ module.exports = {
   },
   plugins: [
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-    require('tailwindcss/plugin')(function ({ addVariant,matchVariant }) {
+    require('tailwindcss/plugin')(function ({ addVariant, matchVariant }) {
       addVariant('hocus', ['&:hover', '&:focus'])
       addVariant('children', '&>*')
-      matchVariant('every', (value)=>(`&>${value}`))
+      matchVariant('every', (value) => `&>${value}`)
     }),
   ],
 }

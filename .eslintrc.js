@@ -9,13 +9,14 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:vue/vue3-recommended',
     'plugin:nuxt/recommended',
+    'plugin:tailwindcss/recommended',
   ],
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'tailwindcss'],
   rules: {
     'vue/max-len': [
       'warn',
@@ -51,4 +52,5 @@ module.exports = {
       },
     ],
   },
+  // tailwindConfig: './tailwind.config.js',
 }
