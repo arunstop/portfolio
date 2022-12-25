@@ -25,7 +25,7 @@
   </a>
   <span
     v-else
-    class="flex gap-1 sm:gap-2 items-center  hover:underline"
+    class="flex gap-1 sm:gap-2 items-center hover:underline"
     role="button"
     @click="copyValue(value)"
   >
