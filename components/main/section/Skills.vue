@@ -121,11 +121,14 @@
 </script>
 <template>
   <div
-    class="bg-gray-100 flex flex-col items-center justify-center p-4 sm:p-8 gap-2 sm:gap-4"
+    class="flex flex-col items-center justify-center gap-2 bg-gray-100 p-4 sm:gap-4 sm:p-8"
   >
-    <div class="text-2xl sm:text-3xl">Skills</div>
+    <div class="text-2xl sm:text-3xl">
+      Skills
+    </div>
     <div
-      class="max-sm:w-full max-sm:max-w-[80%] sm:max-w-4xl md:max-w-5xl lg:max-w-6xl xl:max-w-7xl grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4 p-2 sm:p-4 sm:min-w-[60%]"
+      class="grid gap-2 max-sm:w-full max-sm:max-w-[80%] sm:min-w-[60%] sm:max-w-4xl sm:grid-cols-2 sm:gap-4 
+      md:max-w-5xl md:grid-cols-3 lg:max-w-6xl lg:grid-cols-4 xl:max-w-7xl"
     >
       <MainSkill
         v-for="(skill, idx) in skills"

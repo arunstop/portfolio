@@ -8,27 +8,27 @@
 </script>
 <template>
   <div
-    class="bg-gray-500/20 p-[inherit] rounded-lg sm:rounded-xl flex flex-col gap-i backdrop-blur-sm relative 
-    overflow-hidden group ring-0 hover:ring-4 ring-gray-500 transition-all hover:cursor-pointer"
+    class="group relative flex flex-col gap-i overflow-hidden rounded-lg bg-gray-500/20 p-2 ring-0 ring-gray-500 
+    backdrop-blur-sm transition-all hover:cursor-pointer hover:ring-4 sm:rounded-xl sm:p-4"
   >
     <div
-      class="w-full aspect-square bg-center m-auto absolute inset-0 -z-[1] bg-gray-300 opacity-50 transition-all 
-      duration-500 group-hover:bg-transparent blur-lg group-hover:scale-[1.5] group-hover:blur-sm ease-in"
+      class="absolute inset-0 -z-[1] m-auto aspect-square w-full bg-gray-300 bg-center opacity-50 blur-lg 
+      transition-all duration-500 ease-in group-hover:scale-[1.5] group-hover:bg-transparent group-hover:blur-sm"
     >
       <Icon
         :name="icon"
-        class="w-full h-full   transition-all duration-300 object-center"
+        class="h-full w-full   object-center transition-all duration-300"
       />
     </div>
     <div
-      class="flex items-center gap-1.5 sm:gap-3 justify-center sm:justify-end"
+      class="flex items-center justify-center gap-1.5 sm:justify-end sm:gap-3"
     >
-      <div class="rounded-lg sm:rounded-xl transition-all group-hover:scale-125 group-hover:-translate-x-4 ease-in-out">
+      <div class="rounded-lg transition-all ease-in-out group-hover:-translate-x-4 group-hover:scale-125 sm:rounded-xl">
         <Icon :name="icon" class="text-3xl sm:text-4xl" />
       </div>
       <span class="font-medium sm:text-lg">{{ header }}</span>
     </div>
-    <div class="max-sm:text-center p-1 sm:p-2">
+    <div class="p-1 max-sm:text-center sm:p-2">
       {{ desc }}
     </div>
   </div>

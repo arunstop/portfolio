@@ -38,7 +38,7 @@ module.exports = {
     ],
     'vue/multi-word-component-names': ['off'],
     // 'vue/singleline-html-element-content-newline': ['off'],
-    'vue/no-setup-props-destructure': ['off'],
+    'vue/no-setup-props-destructure': ['off'],  
     'vue/html-self-closing': ['off'],
     'vue/max-attributes-per-line': [
       'error',
@@ -51,6 +51,7 @@ module.exports = {
         },
       },
     ],
+    'tailwindcss/enforces-negative-arbitrary-values': ['off'],
   },
   // tailwindConfig: './tailwind.config.js',
 }
