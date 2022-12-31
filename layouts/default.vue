@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 <template>
-  <div class="flex w-full flex-1 justify-items-stretch">
-    <!-- <LazyMainSidebar /> -->
+  <LazyMainHeader />
+  <div class="relative flex w-full flex-1 flex-col justify-items-stretch">
     <slot />
   </div>
 </template>

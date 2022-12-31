@@ -12,20 +12,22 @@
   }
   defineProps<IProject>()
 
-  function openNewTab(url?:string){
-    if(!url) return
-    window.open(url,'_blank')?.focus()
+  function openNewTab(url?: string) {
+    if (!url) return
+    window.open(url, '_blank')?.focus()
   }
 </script>
 <template>
-  <NuxtLink
+  <div
     class="flex flex-col overflow-hidden rounded-xl border-2 transition-all duration-300 ease-in-out hover:-translate-y-2"
-    :to="link.article"
   >
     <div class="relative flex flex-col">
-      <figure class="h-full sm:h-32 md:h-40 lg:h-48">
-        <img class="h-full w-full" :src="`https://avatars.dicebear.com/api/identicon/${title}.svg`" />
-      </figure>
+      <NuxtLink class="h-32 sm:h-36 md:h-40 lg:h-48" :to="link.article">
+        <img
+          class="h-full w-full object-cover"
+          :src="thumbnail ? thumbnail : `https://avatars.dicebear.com/api/identicon/${title}.svg`"
+        />
+      </NuxtLink>
       <div v-if="stacks.length" class="absolute inset-x-0 bottom-0 flex">
         <div
           class="mx-auto flex justify-center gap-1 rounded-t-lg bg-zinc-200 px-1.5 py-1 sm:gap-2 sm:rounded-t-xl sm:px-2 sm:py-1"
@@ -46,17 +48,19 @@
       <div class="mt-auto grid gap-i sm:grid-cols-2">
         <CommonButton
           class="w-full !min-w-0 text-base sm:text-lg"
+          :disabled="!link.github"
           @click.prevent="openNewTab(link.github)"
         >
           Github
         </CommonButton>
         <CommonButton
           class="w-full !min-w-0 text-base sm:text-lg"
+          :disabled="!link.preview"
           @click.prevent="openNewTab(link.preview)"
         >
           Preview
         </CommonButton>
       </div>
     </div>
-  </NuxtLink>
+  </div>
 </template>
